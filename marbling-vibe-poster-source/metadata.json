@@ -1,0 +1,6 @@
+{
+  "name": "Marbling Vibe Poster",
+  "description": "An interactive emotion poster generator using facial expressions, breath, and hand gestures to create fluid marbling art.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["facial-recognition", "gesture-control", "webgl-rendering"]
+}

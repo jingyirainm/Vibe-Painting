@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Great+Vibes&family=JetBrains+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&family=Outfit:wght@300;400;600&family=Bebas+Neue&family=Libre+Baskerville&family=Montserrat:wght@300;400;600&family=Roboto+Mono:wght@300;400&family=Cinzel&family=Lora&family=Open+Sans:wght@300;400&family=Raleway:wght@300;400&family=Poppins:wght@300;400&family=Dancing+Script&family=Oswald&family=Abril+Fatface&family=UnifrakturMaguntia&family=Syne:wght@400;700&family=Archivo+Black&family=Quicksand&family=Work+Sans&family=Fira+Code&family=Space+Mono&family=Inconsolata&family=Nanum+Myeongjo&family=Zilla+Slab&family=Arvo&family=Old+Standard+TT&family=Exo+2&family=Mada&family=Ubuntu+Mono&family=Gloria+Hallelujah&family=Pacifico&family=Comfortaa&family=Permanent+Marker&family=Special+Elite&family=Alegreya&family=Bodoni+Moda&family=Amiri&family=Crimson+Pro&family=IBM+Plex+Sans&family=Rubik&family=Josefin+Sans&family=Montserrat+Alternates&family=Righteous&family=Monoton&family=Bangers&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-cursive: "Great Vibes", cursive;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  /* Additional fonts mapped to classes */
+  --font-playfair: "Playfair Display", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-baskerville: "Libre Baskerville", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-robotomono: "Roboto Mono", monospace;
+  --font-cinzel: "Cinzel", serif;
+  --font-lora: "Lora", serif;
+  --font-opensans: "Open Sans", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-dancing: "Dancing Script", cursive;
+  --font-oswald: "Oswald", sans-serif;
+  --font-abril: "Abril Fatface", serif;
+  --font-unifraktur: "UnifrakturMaguntia", cursive;
+  --font-syne: "Syne", sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-worksans: "Work Sans", sans-serif;
+  --font-firacode: "Fira Code", monospace;
+  --font-spacemono: "Space Mono", monospace;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-nanum: "Nanum Myeongjo", serif;
+  --font-zilla: "Zilla Slab", serif;
+  --font-arvo: "Arvo", serif;
+  --font-oldstd: "Old Standard TT", serif;
+  --font-exo: "Exo 2", sans-serif;
+  --font-mada: "Mada", sans-serif;
+  --font-ubuntumono: "Ubuntu Mono", monospace;
+  --font-gloria: "Gloria Hallelujah", cursive;
+  --font-pacifico: "Pacifico", cursive;
+  --font-comfortaa: "Comfortaa", sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+  --font-special: "Special Elite", cursive;
+  --font-alegreya: "Alegreya", serif;
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-amiri: "Amiri", serif;
+  --font-crimson: "Crimson Pro", serif;
+  --font-ibmplex: "IBM Plex Sans", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+  --font-montalt: "Montserrat Alternates", sans-serif;
+  --font-righteous: "Righteous", sans-serif;
+  --font-monoton: "Monoton", cursive;
+  --font-bangers: "Bangers", cursive;
+}
+
+@keyframes flow {
+  0% { background-color: #F8F7F5; }
+  25% { background-color: #EBE7E0; }
+  50% { background-color: #F0F2F0; }
+  75% { background-color: #E8E9EB; }
+  100% { background-color: #F8F7F5; }
+}
+
+.animate-flow {
+  animation: flow 15s ease infinite;
+}
+
+:root {
+  --bg-color: #EBE7E0;
+  --ink-color: #2D2D2D;
+  --morandi-mint: #C1D0C1;
+  --morandi-peach: #E9C6B8;
+  --morandi-blue: #B5C4D0;
+  --morandi-dusty: #A8A196;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--ink-color);
+  overflow: hidden;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  z-index: 5;
+}
+
+/* Custom buttons for the theme */
+.btn-sleek {
+  padding: 10px 24px;
+  border: 0.5px solid var(--ink-color);
+  background: transparent;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-sleek:hover {
+  background: var(--ink-color);
+  color: white;
+}
+
+.btn-sleek-active {
+  background: var(--ink-color);
+  color: white;
+}
